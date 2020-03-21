@@ -1,0 +1,13 @@
+syntax="proto3";
+
+message StatusMessage {
+    string message = 1;
+}
+
+message StatusRequest {
+    string source = 1;
+}
+
+service StatusService {
+    rpc ping(StatusRequest) returns (StatusMessage) {}
+}
